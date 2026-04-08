@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #080808;
+  --color-surface: #111111;
+  --color-text-primary: #F0EDE6;
+  --color-text-secondary: #8A8680;
+  --color-accent-red: #C8102E;
+  --color-accent-white: #FAFAF8;
+
+  --font-display: var(--font-fraunces), serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-accent: var(--font-space-grotesk), sans-serif;
+}
+
+:root {
+  --background: #080808;
+}
+
+body {
+  background-color: var(--background);
+  /* Fallback text rendering improvements */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes scrollLine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Custom Cursor Hide - only if not mobile (optional to do here or via JS) */
+
+@media (pointer: fine) {
+  /*
+  body {
+    cursor: none;
+  }
+  */
+}
+
+/* Cal.com Glassmorphism Overrides */
+dialog[open], 
+.cal-embed-overlay, 
+cal-overlay, 
+.cal-modal-container,
+.cal-modal-backdrop {
+  background: rgba(8, 8, 8, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+cal-modal-box {
+  background: transparent !important;
+  box-shadow: none !important;
+  min-height: 600px !important; /* Fix for cut-off modal */
+}
+
+cal-modal-box iframe {
+  min-height: 600px !important; 
+}
+
+iframe[src*="cal.id"], iframe[name^="cal-embed"] {
+  background: transparent !important;
+}
