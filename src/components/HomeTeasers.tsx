@@ -86,29 +86,35 @@ export default function HomeTeasers() {
           </div>
 
           <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article className="group cursor-pointer flex flex-col gap-4">
-               <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
-                 <Image src="https://loremflickr.com/600/400/tattoo,artist?random=10" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-               </div>
-               <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">HISTORY • 6 MIN</span>
-               <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">Why Japanese Irezumi Changed Everything</h4>
-            </article>
+            <Link href="/culture" className="group cursor-pointer flex flex-col gap-4">
+               <article className="w-full flex flex-col gap-4">
+                 <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
+                   <Image src="https://loremflickr.com/600/400/tattoo,artist?random=10" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                 </div>
+                 <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">HISTORY • 6 MIN</span>
+                 <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">Why Japanese Irezumi Changed Everything</h4>
+               </article>
+            </Link>
 
-            <article className="group cursor-pointer flex flex-col gap-4">
-               <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
-                 <Image src="https://loremflickr.com/600/400/tattoo,artist?random=11" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-               </div>
-               <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">OPINION • 4 MIN</span>
-               <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">The Case Against Flash: On Custom-Only Studios</h4>
-            </article>
+            <Link href="/culture" className="group cursor-pointer flex flex-col gap-4">
+               <article className="w-full flex flex-col gap-4">
+                 <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
+                   <Image src="https://loremflickr.com/600/400/tattoo,artist?random=11" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                 </div>
+                 <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">OPINION • 4 MIN</span>
+                 <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">The Case Against Flash: On Custom-Only Studios</h4>
+               </article>
+            </Link>
 
-            <article className="group cursor-pointer flex flex-col gap-4 hidden sm:flex lg:flex">
-               <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
-                 <Image src="https://loremflickr.com/600/400/tattoo,artist?random=12" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-               </div>
-               <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">GUIDE • 8 MIN</span>
-               <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">What Your Artist Needs You to Know Before the First Session</h4>
-            </article>
+            <Link href="/culture" className="group cursor-pointer hidden sm:flex flex-col gap-4 lg:flex">
+               <article className="w-full flex flex-col gap-4">
+                 <div className="w-full aspect-[4/3] relative overflow-hidden bg-surface">
+                   <Image src="https://loremflickr.com/600/400/tattoo,artist?random=12" alt="Article" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                 </div>
+                 <span className="font-accent text-[10px] text-accent-red tracking-widest uppercase">GUIDE • 8 MIN</span>
+                 <h4 className="font-display text-xl leading-snug group-hover:text-text-secondary transition-colors">What Your Artist Needs You to Know Before the First Session</h4>
+               </article>
+            </Link>
           </div>
 
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import BookingInline from "@/components/BookingInline";
 
@@ -62,32 +63,31 @@ export default function CulturePage() {
 
          {/* Magazine Article Listing */}
          {ARTICLES.map((article, idx) => (
-           <article 
-             key={idx} 
-             className="w-full flex justify-between items-start md:items-center py-8 border-b border-surface group cursor-pointer hover:border-text-primary transition-colors duration-500"
-           >
-             {/* Mobile / Shared Title block */}
-             <div className="flex flex-col md:hidden w-full gap-2">
-               <div className="flex justify-between font-accent text-[10px] text-text-secondary uppercase">
-                 <span>{article.date}</span>
-                 <span className="text-accent-red">{article.category}</span>
-               </div>
-               <h3 className="font-display text-3xl group-hover:text-accent-red transition-colors">{article.title}</h3>
-               <span className="font-accent text-[10px] text-text-secondary">{article.readTime}</span>
-             </div>
-
-             {/* Desktop Wide Row */}
-             <div className="hidden md:flex justify-between w-full items-center">
-                 <div className="w-[10%] font-accent text-xs text-text-secondary">{article.date.split(',')[0]}</div>
-                 <h3 className="w-[50%] font-display text-4xl pr-8 group-hover:text-accent-red transition-colors duration-300">
-                   {article.title}
-                 </h3>
-                 <div className="w-[20%] font-accent text-xs tracking-widest text-[#8A8680] group-hover:text-text-primary transition-colors">
-                   {article.category}
+           <Link href="#" key={idx} className="w-full border-b border-surface group cursor-pointer hover:border-text-primary transition-colors duration-500">
+             <article className="w-full flex justify-between items-start md:items-center py-8">
+               {/* Mobile / Shared Title block */}
+               <div className="flex flex-col md:hidden w-full gap-2">
+                 <div className="flex justify-between font-accent text-[10px] text-text-secondary uppercase">
+                   <span>{article.date}</span>
+                   <span className="text-accent-red">{article.category}</span>
                  </div>
-                 <div className="w-[20%] text-right font-accent text-xs tracking-widest">{article.readTime}</div>
-             </div>
-           </article>
+                 <h3 className="font-display text-3xl group-hover:text-accent-red transition-colors">{article.title}</h3>
+                 <span className="font-accent text-[10px] text-text-secondary">{article.readTime}</span>
+               </div>
+
+               {/* Desktop Wide Row */}
+               <div className="hidden md:flex justify-between w-full items-center">
+                   <div className="w-[10%] font-accent text-xs text-text-secondary">{article.date.split(',')[0]}</div>
+                   <h3 className="w-[50%] font-display text-4xl pr-8 group-hover:text-accent-red transition-colors duration-300">
+                     {article.title}
+                   </h3>
+                   <div className="w-[20%] font-accent text-xs tracking-widest text-[#8A8680] group-hover:text-text-primary transition-colors">
+                     {article.category}
+                   </div>
+                   <div className="w-[20%] text-right font-accent text-xs tracking-widest">{article.readTime}</div>
+               </div>
+             </article>
+           </Link>
          ))}
       </section>
 
