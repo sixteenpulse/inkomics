@@ -22,6 +22,12 @@ export default function ContactPage() {
         hideBranding: true,
         layout: "month_view"
       } as any);
+      cal("on", {
+        action: "bookingSuccessful",
+        callback: (event: any) => {
+          window.location.href = "/success";
+        }
+      });
       setIsLoaded(true);
     })();
   }, []);
