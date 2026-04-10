@@ -32,12 +32,6 @@ export default function BookingButton({
         hideBranding: true,
         layout: "month_view"
       } as any);
-      cal("on", {
-        action: "bookingSuccessful",
-        callback: (event: any) => {
-          window.location.href = "/success";
-        }
-      });
     })();
   }, []);
 
@@ -47,7 +41,7 @@ export default function BookingButton({
       data-cal-namespace="default"
       data-cal-link="bold-labs/something-artist"
       data-cal-origin="https://cal.id"
-      data-cal-config='{"layout":"month_view","theme":"dark","successRedirectUrl":"/success"}'
+      data-cal-config='{"layout":"month_view","theme":"dark"}'
     >
       {label}
     </button>
